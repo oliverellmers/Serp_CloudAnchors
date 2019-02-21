@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{DA345AD3-B418-8033-C156-6F482E688CF1}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GoogleARCore/Examples/CloudAnchors/Scripts/AnchorController.cs">
+    <Files>
+      <File FileName="Assets/GoogleARCore/Examples/CloudAnchors/Scripts/CloudAnchorsExampleController.cs" Line="1" Column="1" />
+      <File FileName="Assets/GoogleARCore/Examples/CloudAnchors/Scripts/MultiplatformMeshSelector.cs" Line="1" Column="1" />
+      <File FileName="Assets/GoogleARCore/Examples/CloudAnchors/Scripts/AnchorController.cs" Line="1" Column="1" />
+      <File FileName="Assets/GoogleARCore/Examples/CloudAnchors/Scripts/NetworkManagerUIController.cs" Line="334" Column="1" />
+      <File FileName="Assets/GoogleARCore/Examples/CloudAnchors/Scripts/ARCoreWorldOriginHelper.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
