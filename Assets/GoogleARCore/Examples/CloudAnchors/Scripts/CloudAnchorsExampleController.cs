@@ -141,6 +141,22 @@ namespace GoogleARCore.Examples.CloudAnchors
                 return;
             }
 
+            //HERE------
+            //If the raycast is hitting an existing anchored object do not perform hit test
+            RaycastHit hitObj;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out hitObj))
+            {
+                if (hitObj.collider.tag == "PlacedObject")
+                {
+                    Debug.Log("Touching placed object");
+                    return;
+                }
+            }
+            //-----
+
+
             // Raycast against the location the player touched to search for planes.
             if (Application.platform != RuntimePlatform.IPhonePlayer)
             {
