@@ -143,6 +143,7 @@ namespace GoogleARCore.Examples.CloudAnchors
 
             //HERE------
             //If the raycast is hitting an existing anchored object do not perform hit test
+            ///*
             RaycastHit hitObj;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -154,6 +155,7 @@ namespace GoogleARCore.Examples.CloudAnchors
                     return;
                 }
             }
+            //*/
             //-----
 
 
@@ -296,6 +298,9 @@ namespace GoogleARCore.Examples.CloudAnchors
         private void _InstantiateAnchor()
         {
             // The anchor will be spawned by the host, so no networking Command is needed.
+           // GameObject.Find("LocalPlayer").GetComponent<LocalPlayerController>()
+               //       .SpawnAnchor(Vector3.zero, Quaternion.identity, m_LastPlacedAnchor);
+
             GameObject.Find("LocalPlayer").GetComponent<LocalPlayerController>()
                       .SpawnAnchor(Vector3.zero, Quaternion.identity, m_LastPlacedAnchor);
         }
@@ -306,6 +311,9 @@ namespace GoogleARCore.Examples.CloudAnchors
         private void _InstantiateStar()
         {
             // Star must be spawned in the server so a networking Command is used.
+            //GameObject.Find("LocalPlayer").GetComponent<LocalPlayerController>()
+            //          .CmdSpawnStar(m_LastPlacedAnchor.transform.position, m_LastPlacedAnchor.transform.rotation);
+
             GameObject.Find("LocalPlayer").GetComponent<LocalPlayerController>()
                       .CmdSpawnStar(m_LastPlacedAnchor.transform.position, m_LastPlacedAnchor.transform.rotation);
         }

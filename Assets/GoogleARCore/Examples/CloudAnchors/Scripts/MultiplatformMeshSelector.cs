@@ -29,6 +29,9 @@ namespace GoogleARCore.Examples.CloudAnchors
     /// </summary>
     public class MultiplatformMeshSelector : MonoBehaviour
     {
+
+        public GameObject ARCoreMesh;
+        public GameObject ARKitMesh;
         /// <summary>
         /// The Unity Start() method.
         /// </summary>
@@ -36,13 +39,17 @@ namespace GoogleARCore.Examples.CloudAnchors
         {
             if (Application.platform != RuntimePlatform.IPhonePlayer)
             {
-                transform.Find("ARCoreMesh").gameObject.SetActive(true);
-                transform.Find("ARKitMesh").gameObject.SetActive(false);
+                //transform.Find("ARCoreMesh").gameObject.SetActive(true);
+                //transform.Find("ARKitMesh").gameObject.SetActive(false);
+                ARCoreMesh.SetActive(true);
+                ARKitMesh.SetActive(false);
             }
             else
             {
-                transform.Find("ARCoreMesh").gameObject.SetActive(false);
-                transform.Find("ARKitMesh").gameObject.SetActive(true);
+                //transform.Find("ARCoreMesh").gameObject.SetActive(false);
+                //transform.Find("ARKitMesh").gameObject.SetActive(true);
+                ARCoreMesh.SetActive(false);
+                ARKitMesh.SetActive(true);
             }
         }
     }
