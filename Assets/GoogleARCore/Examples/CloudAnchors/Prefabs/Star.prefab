@@ -703,8 +703,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035bca4b574dc4a2a8d83b85d750c600, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectTranslationMode: 0
-  MaxTranslationDistance: 3
+  ObjectTranslationMode: 2
+  MaxTranslationDistance: 10
 --- !u!114 &2637217892027285653
 MonoBehaviour:
   m_ObjectHideFlags: 0
