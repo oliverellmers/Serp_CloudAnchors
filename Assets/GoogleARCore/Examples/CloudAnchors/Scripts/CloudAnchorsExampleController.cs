@@ -165,8 +165,28 @@ namespace GoogleARCore.Examples.CloudAnchors
                 return;
             }
 
+<<<<<<< HEAD
             TrackableHit arcoreHitResult = new TrackableHit();
             m_LastHitPose = null;
+=======
+            //HERE------
+            //If the raycast is hitting an existing anchored object do not perform hit test
+            ///*
+            RaycastHit hitObj;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out hitObj))
+            {
+                if (hitObj.collider.tag == "PlacedObject")
+                {
+                    Debug.Log("Touching placed object");
+                    return;
+                }
+            }
+            //*/
+            //-----
+
+>>>>>>> master
 
             // Raycast against the location the player touched to search for planes.
             if (Application.platform != RuntimePlatform.IPhonePlayer)
@@ -321,6 +341,9 @@ namespace GoogleARCore.Examples.CloudAnchors
         private void _InstantiateAnchor()
         {
             // The anchor will be spawned by the host, so no networking Command is needed.
+           // GameObject.Find("LocalPlayer").GetComponent<LocalPlayerController>()
+               //       .SpawnAnchor(Vector3.zero, Quaternion.identity, m_LastPlacedAnchor);
+
             GameObject.Find("LocalPlayer").GetComponent<LocalPlayerController>()
                 .SpawnAnchor(Vector3.zero, Quaternion.identity, m_WorldOriginAnchor);
         }
@@ -331,6 +354,9 @@ namespace GoogleARCore.Examples.CloudAnchors
         private void _InstantiateStar()
         {
             // Star must be spawned in the server so a networking Command is used.
+            //GameObject.Find("LocalPlayer").GetComponent<LocalPlayerController>()
+            //          .CmdSpawnStar(m_LastPlacedAnchor.transform.position, m_LastPlacedAnchor.transform.rotation);
+
             GameObject.Find("LocalPlayer").GetComponent<LocalPlayerController>()
                 .CmdSpawnStar(m_LastHitPose.Value.position, m_LastHitPose.Value.rotation);
         }

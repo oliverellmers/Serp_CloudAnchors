@@ -81,7 +81,9 @@ namespace GoogleARCore.Examples.ObjectManipulation
         /// <param name="gesture">The current gesture.</param>
         protected override void OnContinueManipulation(TwoFingerDragGesture gesture)
         {
-            float elevationScale = 0.25f;
+            //float elevationScale = 0.25f;
+            float elevationScale = 0.0f;
+
 
             Quaternion cameraRotation = Camera.main.transform.rotation;
             Vector3 rotatedDelta = cameraRotation * gesture.Delta;

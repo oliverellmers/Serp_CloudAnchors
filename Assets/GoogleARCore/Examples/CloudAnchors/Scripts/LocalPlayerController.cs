@@ -40,6 +40,8 @@ namespace GoogleARCore.Examples.CloudAnchors
         /// </summary>
         public GameObject AnchorPrefab;
 
+        private Component lastPlacedAnchor;
+
         /// <summary>
         /// The Unity OnStartLocalPlayer() method.
         /// </summary>
@@ -66,8 +68,14 @@ namespace GoogleARCore.Examples.CloudAnchors
             // Anchor must be hosted in the device.
             anchorObject.GetComponent<AnchorController>().HostLastPlacedAnchor(anchor);
 
+<<<<<<< HEAD
             // Host can spawn directly without using a Command because the server is running in this
             // instance.
+=======
+            lastPlacedAnchor = anchor;
+
+            // Host can spawn directly without using a Command because the server is running in this instance.
+>>>>>>> master
 #pragma warning disable 618
             NetworkServer.Spawn(anchorObject);
 #pragma warning restore 618
@@ -85,6 +93,8 @@ namespace GoogleARCore.Examples.CloudAnchors
         {
             // Instantiate Star model at the hit pose.
             var starObject = Instantiate(StarPrefab, position, rotation);
+
+            //starObject.transform.SetParent(lastPlacedAnchor.transform);
 
             // Spawn the object in all clients.
 #pragma warning disable 618
