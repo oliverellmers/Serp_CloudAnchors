@@ -1,4 +1,4 @@
-﻿//-----------------------------------------------------------------------
+//-----------------------------------------------------------------------
 // <copyright file="ManipulationSystem.cs" company="Google">
 //
 // Copyright 2018 Google Inc. All Rights Reserved.
@@ -38,7 +38,8 @@ namespace GoogleARCore.Examples.ObjectManipulation
 
         private PinchGestureRecognizer m_PinchGestureRecognizer = new PinchGestureRecognizer();
 
-        private TwoFingerDragGestureRecognizer m_TwoFingerDragGestureRecognizer = new TwoFingerDragGestureRecognizer();
+        private TwoFingerDragGestureRecognizer m_TwoFingerDragGestureRecognizer =
+            new TwoFingerDragGestureRecognizer();
 
         private TapGestureRecognizer m_TapGestureRecognizer = new TapGestureRecognizer();
 
@@ -126,7 +127,7 @@ namespace GoogleARCore.Examples.ObjectManipulation
         /// <summary>
         /// Gets the current selected object.
         /// </summary>
-        public GameObject SelectedObject { get; private set; }
+        public GameObject SelectedObject { get; private set;  }
 
         /// <summary>
         /// The Unity Awake() method.
